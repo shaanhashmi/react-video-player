@@ -3,9 +3,9 @@ import StyledPlaylistItem from './styles/StyledPlaylistItem';
 
 const PlaylistItem = ({ video, active, played }) => (
 	<StyledPlaylistItem active={active} played={played}>
-		<div className="sh-player__video-nr">{video.num}</div>
-		<div className="sh-player__video-name">{video.title}</div>
-		<div className="sh-player__video-time">{video.duration}</div>
+		<div className="shn-player__video-nr">{video.num}</div>
+		<div className="shn-player__video-name">{video.title}</div>
+		<div className="shn-player__video-time">{video.duration}</div>
 	</StyledPlaylistItem>
 );
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
 import Video from '../Video';
 import Playlist from '../containers/Playlist';
-import StyledSnPlayer from '../styles/StyledSnPlayer'
+import StyledShPlayer from '../styles/StyledShPlayer'
 
 const theme = {
 	bgcolor: "#353535",
@@ -104,7 +104,7 @@ const ShPlayer = ({ match, history, location }) => {
 	return (
 		<ThemeProvider theme={state.nightMode ? theme : themeLight}>
 			{state.videos !== null ? (
-				<StyledSnPlayer>
+				<StyledShPlayer>
 					<Video
 						active={state.activeVideo}
 						autoplay={state.autoplay}
@@ -117,7 +117,7 @@ const ShPlayer = ({ match, history, location }) => {
 						nightMode={state.nightMode}
 						nightModeCallback={nightModeCallback}
 					/>
-				</StyledSnPlayer>
+				</StyledShPlayer>
 			) : null}
 		</ThemeProvider>
 	)
