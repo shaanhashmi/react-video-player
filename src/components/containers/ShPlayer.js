@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { ThemeProvider } from 'styled-components';
 import Video from '../Video';
 import Playlist from '../containers/Playlist';
 import StyledShPlayer from '../styles/StyledShPlayer'
+
+import videoData from '../../assets/data/videos.json';
 
 const theme = {
 	bgcolor: "#353535",
@@ -26,8 +29,9 @@ const themeLight = {
 
 
 const ShPlayer = ({ match, history, location }) => {
+	const videos = videoData;
 
-	const videos = JSON.parse(document.querySelector('[name="videos"]').value);
+	// const videos = JSON.parse(document.querySelector('[name="videos"]').value);
 	const savedState = JSON.parse(localStorage.getItem(`${videos.playlistId}`))
 
 	const [state, setState] = useState({
@@ -56,7 +60,7 @@ const ShPlayer = ({ match, history, location }) => {
 			}))
 		} else {
 			history.push({
-				pathname: `/ ${state.activeVideo.id}`,
+				pathname: `/${state.activeVideo.id}`,
 				autoplay: false
 			})
 		}
