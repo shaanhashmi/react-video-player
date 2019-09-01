@@ -8,7 +8,7 @@ const App = () => (
 		<>
 			<Switch>
 				<Route exact path="/" component={ShPlayer} />
-				<Route exact path="/:activeVideoId" component={ShPlayer} />
+				<Route exact path="/:activeVideo" component={ShPlayer} />
 			</Switch>
 			<GlobalStyle />
 		</>

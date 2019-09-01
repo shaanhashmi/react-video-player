@@ -9,11 +9,4 @@ const PlaylistItem = ({ video, active, played }) => (
 	</StyledPlaylistItem>
 );
 
-// const PlaylistItem = props => (
-// 	<StyledPlaylistItem>
-// 		PlaylistItem!!!
-// 	</StyledPlaylistItem>
-// )
-
-
 export default PlaylistItem;
